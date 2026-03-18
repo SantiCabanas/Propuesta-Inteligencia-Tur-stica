@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Estrategia Digital | Inteligencia Turística</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-muted: #666666;
+            --accent-color: #E7005E; /* Color extraído de la imagen */
+            --accent-light: #FDF0F5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .intro {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            margin-bottom: 50px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        /* TIMELINE STYLES */
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E0E0E0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 60px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 4px solid var(--primary-bg);
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+
+        .timeline-content {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .timeline-content h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-content h2 span {
+            font-size: 0.8rem;
+            background-color: var(--accent-light);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .timeline-content p.subtitle {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+        }
+
+        .timeline-content ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .timeline-content ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .placeholder-box {
+            background-color: #F5F5F5;
+            border: 1px dashed #CCCCCC;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            color: #999999;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            background-color: var(--accent-light);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .highlight p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        @media (max-width: 600px) {
+            .timeline::before {
+                left: 10px;
+            }
+            .timeline-item {
+                padding-left: 40px;
+            }
+            .timeline-item::before {
+                left: 2px;
+            }
+            .timeline-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Propuesta Estratégica</h1>
+            <p>SEO, Analítica y SEM para Inteligencia Turística</p>
+        </header>
+
+        <div class="intro">
+            <p>Esta propuesta está diseñada para construir una base de datos sólida antes de invertir en captación. Primero entendemos cómo busca tu cliente ideal, preparamos la medición exacta de los resultados y, finalmente, lanzamos campañas de alta conversión basadas en datos reales del sector turístico.</p>
+        </div>
+
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Fase 1: Estudio SEO y de Mercado <span>Los Cimientos</span></h2>
+                    <p class="subtitle">No partimos de suposiciones. Extraemos datos reales para entender cómo, cuándo y desde dónde busca tu cliente ideal.</p>
+                    <ul>
+                        <li><strong>Análisis de Mercados Emisores:</strong> Identificamos de qué países o regiones provienen las búsquedas de mayor calidad.</li>
+                        <li><strong>Estudio de Estacionalidad:</strong> Mapeamos las tendencias para diferenciar el "Pico de Planificación" del "Pico de Viaje".</li>
+                        <li><strong>Cálculo del "Opportunity Score":</strong> Cruzamos volumen, competencia e intención de búsqueda.</li>
+                        <li><strong>Auditoría de Competencia:</strong> Análisis de competidores directos en Search y Maps.</li>
+                        <li><strong>Arquitectura Web (Insights):</strong> El estudio dictará qué nuevas secciones o landing pages debemos crear antes del SEM.</li>
+                    </ul>
+                    <div class="placeholder-box">
+                        [Aquí insertaremos la gráfica de Google Trends de Turismo]
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Fase 2: SEO vs. SEM <span>Estrategia</span></h2>
+                    <p class="subtitle">El estudio nos indicará dónde invertir cada euro para maximizar rentabilidad.</p>
+                    <ul>
+                        <li><strong>Estrategia SEO (Medio Plazo):</strong> Keywords de alto volumen y baja competencia para contenidos y descubrimiento.</li>
+                        <li><strong>Estrategia SEM (Corto Plazo):</strong> Keywords 100% transaccionales para conversión inmediata, incluyendo Conquesting (robar tráfico a competencia).</li>
+                    </ul>
+                    <div class="placeholder-box">
+                        [Aquí insertaremos la tabla comparativa: Keyword Genérica vs. Keyword de Nicho]
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Fase 3: Setup de Analítica <span>Medición Absoluta</span></h2>
+                    <p class="subtitle">Antes de gastar en anuncios, preparamos la web para rastrear cada acción de valor.</p>
+                    <ul>
+                        <li><strong>Google Analytics 4 (GA4):</strong> Creación, configuración y vinculación de la propiedad.</li>
+                        <li><strong>Google Tag Manager (GTM):</strong> Etiquetado de eventos clave (Clics en "Reservar", formularios, teléfono, emails).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Fase 4: Campaña SEM (4-5 meses) <span>Captación</span></h2>
+                    <p class="subtitle">Lanzamiento controlado para validar la conversión y optimizar costes.</p>
+                    <ul>
+                        <li><strong>A/B Testing:</strong> Pruebas de anuncios, textos y segmentaciones.</li>
+                        <li><strong>Decisión basada en datos:</strong> Rastrear el ROI para decidir cómo escalar el presupuesto.</li>
+                    </ul>
+                    <div class="highlight">
+                        <p><strong>Ventaja Google Partner:</strong> Invertimos 400€ en los primeros 60 días para desbloquear 400€ de crédito de Google. Resultado: <strong>800€ de impacto real</strong> con un coste de solo 400€.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Fase 5: Reporting Mensual <span>Transparencia</span></h2>
+                    <p class="subtitle">Control total sobre el rendimiento de las campañas y el comportamiento del usuario.</p>
+                    <ul>
+                        <li>Coste por Clic (CPC) y volumen de clics totales.</li>
+                        <li>Métricas de comportamiento post-clic (qué hacen al entrar en la web).</li>
+                        <li>Métricas de conversión (Rutas hasta el contacto/cliente).</li>
+                        <li>Resultados y aprendizajes de los test A/B.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
