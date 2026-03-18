@@ -6,16 +6,17 @@
     <title>Propuesta Estratégica | Inteligencia Turística x Loop Development</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-bg: #FFFFFF;
             --section-bg: #FAFAFA;
             --text-main: #1A1A1A;
-            --text-muted: #666666;
+            --text-muted: #4A4A4A;
             --brand-pink: #E7005E;
             --brand-pink-soft: rgba(231, 0, 94, 0.04);
             --brand-pink-hover: rgba(231, 0, 94, 0.08);
+            --border-light: #EAEAEA;
         }
 
         * {
@@ -78,7 +79,7 @@
             justify-content: space-between;
             background-color: var(--brand-pink);
             padding: 80px 10%;
-            min-height: 60vh;
+            min-height: 50vh;
             color: white;
             gap: 40px;
         }
@@ -91,7 +92,6 @@
 
         .hero-left img {
             max-width: 250px;
-            /* Si el logo no es blanco por defecto, esto lo fuerza a blanco: */
             filter: brightness(0) invert(1); 
         }
 
@@ -111,9 +111,13 @@
             padding: 100px 10%;
         }
 
+        .section-bg {
+            background-color: var(--section-bg);
+        }
+
         .section-header {
             margin-bottom: 60px;
-            max-width: 700px;
+            max-width: 800px;
         }
 
         .section-header h2 {
@@ -121,6 +125,7 @@
             font-weight: 600;
             margin-bottom: 15px;
             letter-spacing: -0.5px;
+            color: var(--text-main);
         }
 
         .section-header p {
@@ -161,6 +166,16 @@
             margin-bottom: 20px;
         }
 
+        .card a {
+            color: var(--brand-pink);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
         .placeholder-img {
             width: 100%;
             height: 150px;
@@ -172,30 +187,157 @@
             justify-content: center;
             color: #999;
             font-size: 0.85rem;
+            text-align: center;
+            padding: 10px;
         }
 
         /* INSIGHTS DIVIDER */
         .insights-divider {
-            background-color: var(--text-main);
-            color: white;
+            background-color: #FFFFFF;
+            border: 1px solid var(--brand-pink);
             text-align: center;
-            padding: 80px 10%;
-            margin: 40px 5%;
-            border-radius: 24px;
+            padding: 60px 5%;
+            margin: 0 10%;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
         }
 
         .insights-divider h2 {
             font-size: 2rem;
             margin-bottom: 20px;
-            color: var(--brand-pink);
+            color: var(--text-main);
+            font-weight: 700;
         }
 
         .insights-divider p {
             font-size: 1.1rem;
             max-width: 800px;
             margin: 0 auto;
-            color: #E0E0E0;
+            color: var(--text-muted);
             line-height: 1.8;
+        }
+
+        /* TIMELINE HORIZONTAL */
+        .timeline-wrapper {
+            margin-top: 60px;
+            background: #FFF;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+        }
+
+        .timeline-wrapper h3 {
+            margin-bottom: 30px;
+            font-size: 1.4rem;
+        }
+
+        .timeline-flex {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+
+        .time-block {
+            flex: 1;
+            min-width: 200px;
+            background: var(--section-bg);
+            border-top: 4px solid var(--brand-pink);
+            padding: 25px 20px;
+            border-radius: 0 0 8px 8px;
+            position: relative;
+        }
+
+        .time-block h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .time-block p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .tracking-bar {
+            margin-top: 20px;
+            background: var(--brand-pink-soft);
+            border: 1px dashed var(--brand-pink);
+            color: var(--brand-pink);
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* PRESUPUESTO STYLES (Estilo Guillermo) */
+        .budget-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+        }
+
+        .budget-container h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .budget-item {
+            margin-bottom: 25px;
+        }
+
+        .budget-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .effort-bar-bg {
+            width: 100%;
+            height: 8px;
+            background-color: var(--section-bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .effort-bar-fill {
+            height: 100%;
+            background-color: var(--text-main);
+            border-radius: 4px;
+        }
+
+        .effort-pink {
+            background-color: var(--brand-pink);
+        }
+
+        .total-price {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .total-price span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .total-price h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -1px;
         }
 
         /* FOOTER */
@@ -203,7 +345,7 @@
             background-color: var(--section-bg);
             padding: 40px 10%;
             text-align: center;
-            border-top: 1px solid #EEEEEE;
+            border-top: 1px solid var(--border-light);
         }
 
         footer p {
@@ -220,9 +362,9 @@
             .hero-right h1 {
                 font-size: 2.2rem;
             }
-            nav ul {
-                display: none; /* Simplificación para móvil en esta fase */
-            }
+            nav ul { display: none; }
+            .budget-container { padding: 30px 20px; }
+            .timeline-flex { flex-direction: column; }
         }
     </style>
 </head>
@@ -233,8 +375,8 @@
         <nav>
             <ul>
                 <li><a href="#seo">1. Estudio Base</a></li>
-                <li><a href="#insights">2. Insights</a></li>
-                <li><a href="#marketing">3. Marketing & SEM</a></li>
+                <li><a href="#marketing">2. Marketing & SEM</a></li>
+                <li><a href="#presupuesto">3. Presupuesto</a></li>
             </ul>
         </nav>
     </header>
@@ -251,36 +393,36 @@
     <section id="seo">
         <div class="section-header">
             <h2>Los Cimientos: Estudio SEO y de Mercado</h2>
-            <p>Antes de lanzar cualquier campaña, necesitamos entender el terreno. Analizamos tendencias reales de Google para saber qué busca el usuario, cuándo lo busca y qué está haciendo la competencia.</p>
+            <p>Antes de lanzar cualquier campaña, necesitamos entender el terreno. Analizamos tendencias reales de Google para saber qué buscan los actores del sector turístico, cuándo lo buscan y cómo preparar la estrategia.</p>
         </div>
 
         <div class="grid-container">
             <div class="card">
-                <h3>Estacionalidad y Google Trends</h3>
-                <p>El turismo vive de los tiempos. Identificamos los picos de búsqueda (cuando el usuario planifica) frente a los picos de viaje para saber exactamente cuándo encender los anuncios.</p>
-                <div class="placeholder-img">[Screenshot de Google Trends]</div>
-            </div>
-            
-            <div class="card">
                 <h3>Intención de Búsqueda</h3>
-                <p>No todas las keywords valen igual. Filtramos términos informacionales vs. transaccionales para encontrar el "Opportunity Score": alto volumen y baja competencia.</p>
+                <p>No todas las keywords valen igual. Filtramos términos informacionales vs. transaccionales para encontrar el "Opportunity Score": alto volumen y baja competencia dentro del nicho B2B turístico.</p>
                 <div class="placeholder-img">[Screenshot de Excel de Keywords]</div>
             </div>
 
             <div class="card">
                 <h3>Análisis de la Competencia</h3>
-                <p>Auditamos a los competidores en Google Search y Maps. Vemos por qué términos están pagando y detectamos huecos en el mercado que tu marca puede aprovechar.</p>
+                <p>Auditamos a los competidores en Google Search. Analizamos por qué términos están pagando actualmente y detectamos huecos en el mercado que la consultoría puede aprovechar.</p>
                 <div class="placeholder-img">[Screenshot de Competencia]</div>
+            </div>
+
+            <div class="card">
+                <h3>Estacionalidad y Google Trends</h3>
+                <p>Como consultora para actores del sector hospitality & tourism, es vital anticiparse. Analizamos qué buscan las empresas y destinos, y cuándo lo hacen, para preparar la estrategia de captación de cada Quarter del año.</p>
+                <div class="placeholder-img">[Screenshot de Google Trends]</div>
             </div>
         </div>
     </section>
 
-    <div id="insights" class="insights-divider">
+    <div class="insights-divider">
         <h2>De los Datos a la Acción (Insights)</h2>
-        <p>Este estudio no es solo un documento; es la hoja de ruta de la web. Los datos nos indicarán si, antes de activar el SEM, necesitamos crear nuevas secciones, añadir FAQs, ajustar la propuesta de valor o rediseñar landing pages específicas. Una vez la web esté lista para convertir de forma óptima, pasamos a la fase de Marketing.</p>
+        <p>Este estudio no es solo un documento; es la hoja de ruta de la web. Los datos nos indicarán si, antes de activar el SEM, necesitamos crear nuevas secciones, añadir FAQs, ajustar la propuesta de valor o rediseñar landing pages específicas. Una vez la web esté lista para convertir, pasamos al marketing.</p>
     </div>
 
-    <section id="marketing">
+    <section id="marketing" class="section-bg">
         <div class="section-header">
             <h2>Fase de Marketing: Medición y Captación</h2>
             <p>Una vez tenemos la estrategia y la web preparada, configuramos el ecosistema para que cada euro invertido sea rastreable y genere impacto real.</p>
@@ -288,29 +430,109 @@
 
         <div class="grid-container">
             <div class="card">
-                <h3>1. Setup de Analítica (GA4 & GTM)</h3>
-                <p>No hay marketing sin medición. Configuramos Google Analytics 4 y Google Tag Manager para trackear cada conversión: clics en reservas, formularios de contacto, llamadas y emails.</p>
+                <h3>1. Promo Google: 400€ + 400€</h3>
+                <p>Aprovechamos las ventajas de <a href="https://business.google.com/es/google-ads/" target="_blank">Google Partner</a>: invertimos los primeros 400€ en 60 días para desbloquear 400€ de crédito gratuito. Consigues 800€ de impacto real a mitad de coste.</p>
             </div>
             
             <div class="card">
-                <h3>2. Lanzamiento SEM y Copies</h3>
-                <p>Estructuramos las campañas de Google Ads basándonos en las keywords transaccionales del estudio SEO. Redactamos anuncios persuasivos orientados a la conversión directa.</p>
+                <h3>2. Setup de Analítica (GA4 & GTM)</h3>
+                <p>Creamos el funnel entero: desde que un usuario hace clic en el anuncio hasta la venta final o contacto, para poder medir el retorno exacto (ROI) de cada euro de inversión.</p>
             </div>
 
             <div class="card">
-                <h3>3. Promo Google: 400€ + 400€</h3>
-                <p>Aprovechamos las ventajas de Google Partner: invertimos los primeros 400€ en 60 días para desbloquear 400€ de crédito gratuito. Consigues 800€ de impacto real a mitad de coste.</p>
+                <h3>3. Configuración y Lanzamiento SEM</h3>
+                <p>Estructuramos las campañas de Google Ads basándonos en las keywords transaccionales del estudio SEO. Redactamos anuncios y configuramos las pujas orientadas a la conversión.</p>
             </div>
 
             <div class="card">
-                <h3>4. Tracking y A/B Testing (4-5 Meses)</h3>
-                <p>Dejamos correr la campaña analizando el Coste por Clic (CPC). Realizamos tests A/B constantes (probando diferentes textos y segmentaciones) y entregamos reportes mensuales de ROI.</p>
+                <h3>4. Tracking y A/B Testing</h3>
+                <p>Esta fase ocurre en paralelo durante toda la campaña. Realizamos tests A/B constantes (probando diferentes textos y segmentaciones) y entregamos reportes de rendimiento.</p>
+            </div>
+        </div>
+
+        <div class="timeline-wrapper">
+            <h3>Cronograma de Ejecución SEM (Aprox. 4-5 Meses)</h3>
+            <div class="timeline-flex">
+                <div class="time-block">
+                    <h4>Semana 1</h4>
+                    <p>Setup de Analítica, creación del Funnel de Conversión y diseño/lanzamiento de la campaña SEM.</p>
+                </div>
+                <div class="time-block">
+                    <h4>Días 1 - 60</h4>
+                    <p>Fase de Inversión Inicial. Consumimos los primeros 400€ de presupuesto para cumplir los requisitos de la promoción de Google.</p>
+                </div>
+                <div class="time-block" style="border-top-color: var(--text-muted); background: #F5F5F5;">
+                    <h4>Pausa Técnica</h4>
+                    <p>Periodo de espera (1-2 semanas) donde Google valida la inversión y otorga el crédito en la cuenta publicitaria.</p>
+                </div>
+                <div class="time-block">
+                    <h4>Días 61 - 120</h4>
+                    <p>Fase de Crédito. Invertimos los 400€ regalados por Google para maximizar la visibilidad sin coste adicional.</p>
+                </div>
+            </div>
+            <div class="tracking-bar">
+                Tracking, Optimización y Tests A/B activos durante toda la duración de la campaña (Fase 4)
+            </div>
+        </div>
+    </section>
+
+    <section id="presupuesto">
+        <div class="section-header" style="margin-left: auto; margin-right: auto; text-align: center;">
+            <h2>Inversión y Esfuerzo</h2>
+            <p>Desglose transparente del tiempo y recursos dedicados a cada fase del proyecto.</p>
+        </div>
+
+        <div class="budget-container">
+            
+            <div class="budget-item">
+                <div class="budget-header">
+                    <span>Estudio SEO y de Mercado</span>
+                    <span>Alta prioridad</span>
+                </div>
+                <div class="effort-bar-bg">
+                    <div class="effort-bar-fill effort-pink" style="width: 40%;"></div>
+                </div>
+            </div>
+
+            <div class="budget-item">
+                <div class="budget-header">
+                    <span>Tracking, Optimización y A/B Testing (4-5 meses)</span>
+                    <span>Media-Alta</span>
+                </div>
+                <div class="effort-bar-bg">
+                    <div class="effort-bar-fill" style="width: 30%;"></div>
+                </div>
+            </div>
+
+            <div class="budget-item">
+                <div class="budget-header">
+                    <span>Configuración y Lanzamiento Campaña SEM</span>
+                    <span>Media</span>
+                </div>
+                <div class="effort-bar-bg">
+                    <div class="effort-bar-fill" style="width: 20%;"></div>
+                </div>
+            </div>
+
+            <div class="budget-item">
+                <div class="budget-header">
+                    <span>Setup de Analítica (GA4 & GTM)</span>
+                    <span>Técnica</span>
+                </div>
+                <div class="effort-bar-bg">
+                    <div class="effort-bar-fill" style="width: 10%;"></div>
+                </div>
+            </div>
+
+            <div class="total-price">
+                <span>Inversión Total Proyecto</span>
+                <h3>0€</h3>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Loop Development. Propuesta confidencial preparada para Inteligencia Turística.</p>
+        <p>&copy; 2026 Loop Development. Propuesta preparada para Inteligencia Turística.</p>
     </footer>
 
 </body>
