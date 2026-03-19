@@ -58,6 +58,7 @@
         .card:hover { background: var(--pink-hover); transform: translateY(-5px); }
         .card h3 { font-size: 1.3rem; color: var(--pink); margin-bottom: 15px; font-weight: 600; }
         .card p { color: var(--text-gray); font-size: 0.95rem; }
+        .card-note { display: block; margin-top: 15px; font-size: 0.85rem; color: #777; font-style: italic; line-height: 1.4; }
         
         .classic-link { color: var(--classic-link); text-decoration: underline; font-weight: 600; }
 
@@ -76,11 +77,12 @@
         .price-row.total { margin-top: 15px; padding-top: 15px; border-top: 2px solid var(--text-dark); color: var(--text-dark); font-weight: 700; font-size: 1.8rem; align-items: center; letter-spacing: -0.5px; }
 
         .timeline-wrapper { margin-top: 60px; background: var(--bg-white); padding: 40px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
-        .timeline-wrapper h3 { margin-bottom: 30px; font-size: 1.4rem; color: var(--text-dark); }
+        .timeline-wrapper h3 { margin-bottom: 10px; font-size: 1.4rem; color: var(--text-dark); }
+        .timeline-disclaimer { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 30px; padding-left: 15px; border-left: 3px solid var(--pink); font-style: italic; line-height: 1.5; }
+        
         .timeline-flex { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; }
         .time-block { flex: 1; min-width: 200px; background: var(--bg-gray); border-top: 4px solid var(--pink); padding: 25px 20px; border-radius: 0 0 8px 8px; }
         .time-block.pause-block { border-top-color: var(--text-gray); background: #F5F5F5; }
-        
         .time-block h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--text-dark); }
         .promo-subheader { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--pink); font-weight: 700; display: block; margin-bottom: 15px; }
         .time-block.pause-block .promo-subheader { color: var(--text-gray); }
@@ -93,8 +95,7 @@
         /* ================= RECOMMENDATIONS BLOCK ================= */
         .recommendations-block { background: var(--pink); text-align: center; padding: 80px 10%; margin: 60px 0 0 0; border-radius: 16px; box-shadow: 0 10px 40px rgba(231, 0, 94, 0.1); }
         .recommendations-block h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 25px; color: white; letter-spacing: -0.5px; }
-        .recommendations-block p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: white; line-height: 1.8; font-weight: 400; }
-        .recommendations-block strong { color: white; font-weight: 700; }
+        .recommendations-block p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; color: white; line-height: 1.8; font-weight: 500; }
 
         /* ================= LEGAL & DISCLAIMED INFO ================= */
         .info-box { background: var(--bg-white); border: 1px solid var(--border); border-left: 4px solid var(--text-dark); padding: 30px; border-radius: 8px; margin-top: 60px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
@@ -168,7 +169,7 @@
 
     <section id="seo">
         <div class="section-header">
-            <h2><span class="lang es">Fase 1: Estudio SEO y de Mercado</span><span class="lang en hidden">Phase 1: SEO & Market Study</span></h2>
+            <h2><span class="lang es">Estudio SEO y de Mercado</span><span class="lang en hidden">SEO & Market Study</span></h2>
             <p><span class="lang es">Análisis de tendencias reales de Google para saber qué se busca en el sector turístico, cuándo se busca y preparar la base de la estrategia extrayendo keywords clave.</span><span class="lang en hidden">Analysis of real Google trends to know what is searched in the tourism sector, when it's searched, and to prepare the strategy baseline by extracting key keywords.</span></p>
         </div>
 
@@ -176,6 +177,10 @@
             <div class="card">
                 <h3><span class="lang es">Intención de Búsqueda</span><span class="lang en hidden">Search Intent</span></h3>
                 <p><span class="lang es">Extraemos cientos de búsquedas de keywords en Google. Filtramos términos informacionales vs. transaccionales para encontrar alto volumen y baja competencia B2B.</span><span class="lang en hidden">We extract hundreds of Google keyword searches. We filter informational vs. transactional terms to find high volume and low B2B competition.</span></p>
+                <span class="card-note">
+                    <span class="lang es">Ejemplo que comentamos de “pilates para embarazadas” o “taxi desde el aeropuerto” en el caso de un hotel.</span>
+                    <span class="lang en hidden">Example we discussed: “pilates for pregnant women” or “airport taxi” for a hotel.</span>
+                </span>
             </div>
             <div class="card">
                 <h3><span class="lang es">Análisis de Competencia</span><span class="lang en hidden">Competitor Analysis</span></h3>
@@ -229,39 +234,45 @@
 
         <div class="recommendations-block">
             <h2>
-                <span class="lang es">Recomendaciones del Estudio SEO</span>
-                <span class="lang en hidden">SEO Study Recommendations</span>
+                <span class="lang es">Recomendaciones tras el Estudio SEO</span>
+                <span class="lang en hidden">Recommendations after the SEO Study</span>
             </h2>
             <p>
-                <span class="lang es"><strong>Los datos nos indicarán si, antes de activar el SEM, necesitamos crear secciones, añadir FAQs, ajustar la propuesta o rediseñar landing pages.</strong></span>
-                <span class="lang en hidden"><strong>The data will tell us if, before activating SEM, we need to create sections, add FAQs, adjust the proposal, or redesign landing pages.</strong></span>
+                <span class="lang es">Los datos nos indicarán si, antes de activar el SEM, necesitamos crear secciones, añadir FAQs, ajustar la propuesta o rediseñar landing pages.</span>
+                <span class="lang en hidden">The data will tell us if, before activating SEM, we need to create sections, add FAQs, adjust the proposal, or redesign landing pages.</span>
             </p>
         </div>
     </section>
 
     <section id="sem" class="bg-gray">
         <div class="section-header">
-            <h2><span class="lang es">Fase 2: Analítica y Captación SEM</span><span class="lang en hidden">Phase 2: Analytics & SEM</span></h2>
+            <h2><span class="lang es">Analítica y Captación SEM</span><span class="lang en hidden">Analytics & SEM</span></h2>
             <p><span class="lang es">Configuramos el ecosistema para que cada euro invertido sea rastreable y genere impacto directo en ventas/contactos.</span><span class="lang en hidden">We configure the ecosystem so every invested euro is trackable and generates direct impact on sales/contacts.</span></p>
         </div>
 
         <div class="grid-container">
             <div class="card">
                 <h3><span class="lang es">1. Promo 400€ + 400€</span><span class="lang en hidden">1. Promo €400 + €400</span></h3>
-                <p><span class="lang es">Ventajas <a href="https://business.google.com/es/google-ads/" target="_blank" class="classic-link">Google Partner</a>: invirtiendo 400€ en 60 días, Google nos regala otros 400€ de crédito para gastar.</span><span class="lang en hidden"><a href="https://business.google.com/es/google-ads/" target="_blank" class="classic-link">Google Partner</a> benefits: investing €400 in 60 days, Google gifts us another €400 in ad credit.</span></p>
+                <p><span class="lang es">Ventajas <a href="https://business.google.com/es/google-ads/" target="_blank" class="classic-link">Google Partner</a>: invirtiendo 400€ en 60 días, Google nos regala otros 400€ de crédito para gastar en otros 60 días.</span><span class="lang en hidden"><a href="https://business.google.com/es/google-ads/" target="_blank" class="classic-link">Google Partner</a> benefits: investing €400 in 60 days, Google gifts us another €400 in ad credit to spend in another 60 days.</span></p>
             </div>
             <div class="card">
                 <h3><span class="lang es">2. Setup Analítica de Ads</span><span class="lang en hidden">2. Ads Analytics Setup</span></h3>
-                <p><span class="lang es">Vinculamos Google Ads a la web y configuramos el funnel de conversión aprovechando tu GA4 y Hotjar actuales. Medimos cada euro invertido: desde impresiones y clics, hasta visitas, contactos y ventas finales.</span><span class="lang en hidden">We connect Google Ads to the website and set up the conversion funnel leveraging your current GA4 and Hotjar. We measure every invested euro: from impressions and clicks, to web views, contacts, and final sales.</span></p>
+                <p><span class="lang es">Vinculamos Google Ads a la web y configuramos el funnel de conversión aprovechando GA4 y Hotjar ya conectados a la web. Medimos cada euro invertido: desde clics hasta ventas finales.</span><span class="lang en hidden">We connect Google Ads to the website and set up the conversion funnel leveraging GA4 and Hotjar already connected to the website. We measure every euro: from clicks to final sales.</span></p>
             </div>
             <div class="card">
                 <h3><span class="lang es">3. Lanzamiento SEM</span><span class="lang en hidden">3. SEM Launch</span></h3>
-                <p><span class="lang es">Campañas Ads basadas en keywords transaccionales orientadas puramente a conversión.</span><span class="lang en hidden">Ads campaigns based on transactional keywords focused purely on conversion.</span></p>
+                <p><span class="lang es">Campañas Ads basadas en keywords transaccionales orientadas a conversión. Elegimos exactamente cómo aparecer (con anuncios curados) ante las búsquedas específicas de nuestro target.</span><span class="lang en hidden">Ads campaigns based on transactional keywords focused on conversion. We choose exactly how to appear (with curated ads) for the specific searches of our target.</span></p>
             </div>
         </div>
 
         <div class="timeline-wrapper">
             <h3><span class="lang es">Cronograma SEM (4 Meses)</span><span class="lang en hidden">SEM Timeline (4 Months)</span></h3>
+            
+            <div class="timeline-disclaimer">
+                <span class="lang es">Nota: El tiempo es una estimación. El ritmo de inversión, la activación de la promoción de Google (sujeta a sus plazos) y las reuniones esporádicas con agentes oficiales de Google Ads pueden extender la duración real a 5 o 6 meses. Sin embargo, el coste de nuestros honorarios está estrictamente cerrado a 4 meses.</span>
+                <span class="lang en hidden">Note: Time is an estimate. Spend rate, Google promo activation (subject to their timelines), and sporadic meetings with official Google Ads reps can extend the actual duration to 5 or 6 months. However, our service fees are strictly capped at 4 months.</span>
+            </div>
+
             <div class="timeline-flex">
                 <div class="time-block">
                     <h4><span class="lang es">Semana 1</span><span class="lang en hidden">Week 1</span></h4>
@@ -317,7 +328,7 @@
 
     <section id="bot">
         <div class="section-header">
-            <h2><span class="lang es">Fase 3: Desarrollo de Chatbot Interactivo</span><span class="lang en hidden">Phase 3: Interactive Chatbot Development</span></h2>
+            <h2><span class="lang es">Desarrollo de Chatbot Interactivo</span><span class="lang en hidden">Interactive Chatbot Development</span></h2>
             <p><span class="lang es">Automatización de atención al cliente y flujos de captación mediante inteligencia artificial.</span><span class="lang en hidden">Customer service and lead generation automation through artificial intelligence.</span></p>
         </div>
 
