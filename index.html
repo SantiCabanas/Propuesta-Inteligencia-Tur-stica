@@ -99,9 +99,14 @@
         .gt-label { font-weight: 600; font-size: 1.1rem; color: var(--text-dark); margin-bottom: 10px; display: flex; justify-content: space-between; }
         .gt-label span.duration { font-size: 0.9rem; color: var(--text-gray); font-weight: 400; }
         .gt-bar-bg { width: 100%; background: var(--bg-gray); border-radius: 8px; height: 40px; position: relative; overflow: hidden; border: 1px solid var(--border); }
-        .gt-bar { height: 100%; display: flex; align-items: center; padding-left: 15px; color: white; font-size: 0.85rem; font-weight: 600; border-radius: 8px; position: absolute; left: 0; top: 0; }
-        .gt-bar.bot { background: var(--text-dark); width: 35%; z-index: 2; } /* 7 weeks */
-        .gt-bar.marketing { background: var(--pink); width: 100%; z-index: 1; } /* 5 months */
+        .gt-bar { height: 100%; display: flex; align-items: center; padding-left: 15px; color: white; font-size: 0.85rem; font-weight: 600; position: absolute; top: 0; }
+        
+        .gt-bar.bot { background: var(--text-dark); width: 35%; z-index: 3; border-radius: 8px; left: 0; } /* 7 weeks */
+        
+        /* Divided Marketing Bar */
+        .gt-bar.seo { background: var(--pink); width: 20%; z-index: 2; border-radius: 8px 0 0 8px; left: 0; border-right: 2px solid white; } /* 1 month */
+        .gt-bar.sem { background: #A30043; width: 80%; left: 20%; z-index: 1; border-radius: 0 8px 8px 0; } /* 4 months */
+        
         .gt-markers { display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8rem; color: var(--text-gray); padding: 0 5px; }
 
         /* ================= RECOMMENDATIONS BLOCK ================= */
@@ -146,7 +151,7 @@
             .time-block { border-top: none; border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 20px 15px; }
             .time-block.pause-block { border-top-color: transparent; border-left-color: var(--text-gray); }
             
-            .gt-bar span { display: none; } 
+            .gt-bar span { display: none; } /* Hide text inside bars on mobile for cleaner look */
         }
     </style>
 </head>
@@ -429,11 +434,12 @@
             
             <div class="gt-track">
                 <div class="gt-label">
-                    <span class="lang es">Marketing (Estudio SEO & Captación SEM)</span><span class="lang en hidden">Marketing (SEO Study & SEM)</span>
+                    <span class="lang es">Marketing (SEO & SEM)</span><span class="lang en hidden">Marketing (SEO & SEM)</span>
                     <span class="duration"><span class="lang es">5 Meses en Total</span><span class="lang en hidden">5 Months Total</span></span>
                 </div>
                 <div class="gt-bar-bg">
-                    <div class="gt-bar marketing" style="width: 100%;"><span class="lang es">En paralelo y continuado tras la Fase de Datos</span><span class="lang en hidden">Parallel and ongoing after the Data Phase</span></div>
+                    <div class="gt-bar seo"><span class="lang es">SEO</span><span class="lang en hidden">SEO</span></div>
+                    <div class="gt-bar sem"><span class="lang es">SEM (Meses 2 - 5)</span><span class="lang en hidden">SEM (Months 2 - 5)</span></div>
                 </div>
             </div>
             <div class="gt-markers">
@@ -459,8 +465,8 @@
                 </li>
                 <li style="margin-top: 20px;">
                     <strong style="color: var(--text-dark);"><span class="lang es">Incertidumbre Técnica y Límites de la IA:</span><span class="lang en hidden">Technical Uncertainty & AI Limits:</span></strong> 
-                    <span class="lang es">El cliente reconoce la naturaleza experimental e imprevisible de la Inteligencia Artificial generativa[cite: 1]. A pesar de utilizar arquitectura RAG para ceñir las respuestas a los datos de la web, existe un margen de incertidumbre técnica inherente, incluyendo posibles "alucinaciones" del modelo o desvíos de contexto[cite: 1]. Se requerirá flexibilidad por parte del cliente para adaptar los resultados mediante <em>prompting</em> [cite: 1], asumiendo que no se admitirán bucles de revisión infinitos persiguiendo una precisión humana microscópica sin incurrir en presupuestos adicionales[cite: 1].</span>
-                    <span class="lang en hidden">The client acknowledges the experimental and unpredictable nature of generative Artificial Intelligence[cite: 1]. Despite using RAG architecture to constrain responses to website data, there is an inherent margin of technical uncertainty, including possible model "hallucinations" or context deviations[cite: 1]. Client flexibility will be required to adapt results via <em>prompting</em> [cite: 1], assuming infinite revision loops pursuing microscopic human precision will not be admitted without incurring additional budgets[cite: 1].</span>
+                    <span class="lang es">El cliente reconoce la naturaleza experimental e imprevisible de la Inteligencia Artificial generativa. A pesar de utilizar arquitectura RAG para ceñir las respuestas a los datos de la web, existe un margen de incertidumbre técnica inherente, incluyendo posibles "alucinaciones" del modelo o desvíos de contexto. Se requerirá flexibilidad por parte del cliente para adaptar los resultados mediante <em>prompting</em>, asumiendo que no se admitirán bucles de revisión infinitos persiguiendo una precisión humana microscópica sin incurrir en presupuestos adicionales.</span>
+                    <span class="lang en hidden">The client acknowledges the experimental and unpredictable nature of generative Artificial Intelligence. Despite using RAG architecture to constrain responses to website data, there is an inherent margin of technical uncertainty, including possible model "hallucinations" or context deviations. Client flexibility will be required to adapt results via <em>prompting</em>, assuming infinite revision loops pursuing microscopic human precision will not be admitted without incurring additional budgets.</span>
                 </li>
                 <li style="margin-top: 20px;">
                     <strong style="color: var(--text-dark);"><span class="lang es">Privacidad y Legalidad:</span><span class="lang en hidden">Privacy & Compliance:</span></strong> 
