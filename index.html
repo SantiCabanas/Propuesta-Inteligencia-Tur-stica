@@ -100,9 +100,8 @@
         .gt-label span.duration { font-size: 0.9rem; color: var(--text-gray); font-weight: 400; }
         .gt-bar-bg { width: 100%; background: var(--bg-gray); border-radius: 8px; height: 40px; position: relative; overflow: hidden; border: 1px solid var(--border); }
         .gt-bar { height: 100%; display: flex; align-items: center; padding-left: 15px; color: white; font-size: 0.85rem; font-weight: 600; border-radius: 8px; position: absolute; left: 0; top: 0; }
-        .gt-bar.bot { background: var(--text-dark); width: 37.5%; z-index: 2; } /* 1.5 months out of 4 */
-        .gt-bar.seo { background: var(--pink); width: 25%; z-index: 2; } /* 1 month */
-        .gt-bar.sem { background: rgba(231, 0, 94, 0.7); width: 100%; z-index: 1; } /* 4 months */
+        .gt-bar.bot { background: var(--text-dark); width: 35%; z-index: 2; } /* 7 weeks */
+        .gt-bar.marketing { background: var(--pink); width: 100%; z-index: 1; } /* 5 months */
         .gt-markers { display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8rem; color: var(--text-gray); padding: 0 5px; }
 
         /* ================= RECOMMENDATIONS BLOCK ================= */
@@ -147,7 +146,7 @@
             .time-block { border-top: none; border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 20px 15px; }
             .time-block.pause-block { border-top-color: transparent; border-left-color: var(--text-gray); }
             
-            .gt-bar span { display: none; } /* Hide text inside bars on very small screens */
+            .gt-bar span { display: none; } 
         }
     </style>
 </head>
@@ -191,40 +190,40 @@
         <div class="grid-container">
             <div class="card">
                 <h3><span class="lang es">Alcance del Proyecto</span><span class="lang en hidden">Project Scope</span></h3>
-                <p><span class="lang es">El chatbot indexará toda la información de la web: el marketplace, casos de éxito, escuela IT, actualidad y servicios corporativos. Responderá de forma precisa basándose únicamente en vuestros datos, sin inventar información externa.</span><span class="lang en hidden">The chatbot will index all website information: the marketplace, success stories, IT school, news, and corporate services. It will answer precisely based solely on your data, without hallucinating external information.</span></p>
+                <p><span class="lang es">El chatbot indexará toda la información de la web: el marketplace, casos de éxito, escuela IT, actualidad y servicios corporativos. Responderá de forma precisa basándose únicamente en vuestros datos.</span><span class="lang en hidden">The chatbot will index all website information: the marketplace, success stories, IT school, news, and corporate services. It will answer precisely based solely on your data.</span></p>
             </div>
             <div class="card">
                 <h3><span class="lang es">Arquitectura (RAG)</span><span class="lang en hidden">Architecture (RAG)</span></h3>
-                <p><span class="lang es">Implementaremos un sistema avanzado: Extraeremos el contenido de WordPress, lo almacenaremos en una Base de Datos Vectorial para búsquedas semánticas, y conectaremos el motor de IA nativamente mediante un widget integrado.</span><span class="lang en hidden">We will implement an advanced system: We will extract WordPress content, store it in a Vector Database for semantic searches, and connect the AI engine natively via an integrated widget.</span></p>
+                <p><span class="lang es">Implementaremos un sistema avanzado: Extraeremos el contenido de WordPress, lo almacenaremos en una Base de Datos Vectorial para búsquedas semánticas, y conectaremos el motor de IA mediante un widget.</span><span class="lang en hidden">We will implement an advanced system: We will extract WordPress content, store it in a Vector Database for semantic searches, and connect the AI engine via a widget.</span></p>
             </div>
             <div class="card">
                 <h3><span class="lang es">Selección de Modelo de IA</span><span class="lang en hidden">AI Model Selection</span></h3>
-                <p><span class="lang es">Durante la Fase 1, evaluaremos técnicamente los motores de OpenAI (GPT), Google (Gemini) y Anthropic (Claude) para determinar cuál ofrece el mejor rendimiento, precisión y rentabilidad para el volumen de consultas de Inteligencia Turística.</span><span class="lang en hidden">During Phase 1, we will technically evaluate OpenAI (GPT), Google (Gemini), and Anthropic (Claude) engines to determine which offers the best performance, precision, and cost-efficiency for Inteligencia Turística's query volume.</span></p>
+                <p><span class="lang es">Evaluaremos los motores de OpenAI (GPT), Google (Gemini) y Anthropic (Claude) para determinar cuál ofrece el mejor rendimiento, precisión y rentabilidad para el volumen de consultas del proyecto.</span><span class="lang en hidden">We will evaluate OpenAI (GPT), Google (Gemini), and Anthropic (Claude) engines to determine which offers the best performance, precision, and cost-efficiency for the project's query volume.</span></p>
             </div>
         </div>
 
         <div class="timeline-wrapper">
-            <h3><span class="lang es">Cronograma Desarrollo ChatBot (6 Semanas)</span><span class="lang en hidden">ChatBot Development Timeline (6 Weeks)</span></h3>
+            <h3><span class="lang es">Cronograma Desarrollo ChatBot (7 Semanas)</span><span class="lang en hidden">ChatBot Development Timeline (7 Weeks)</span></h3>
             <div class="timeline-flex">
                 <div class="time-block">
-                    <h4><span class="lang es">Semana 1</span><span class="lang en hidden">Week 1</span></h4>
-                    <span class="promo-subheader"><span class="lang es">Análisis y Selección</span><span class="lang en hidden">Analysis & Selection</span></span>
-                    <p><span class="lang es">Discovery de la web, definición de casos de uso y selección del modelo de lenguaje (LLM).</span><span class="lang en hidden">Web discovery, use case definition, and Large Language Model (LLM) selection.</span></p>
+                    <h4><span class="lang es">Semanas 1 - 2</span><span class="lang en hidden">Weeks 1 - 2</span></h4>
+                    <span class="promo-subheader"><span class="lang es">Análisis y Motor RAG</span><span class="lang en hidden">Analysis & RAG Engine</span></span>
+                    <p><span class="lang es">Discovery, selección de LLM, crawler de contenidos y base de datos vectorial.</span><span class="lang en hidden">Discovery, LLM selection, content crawler, and vector database.</span></p>
                 </div>
                 <div class="time-block">
-                    <h4><span class="lang es">Semanas 2 - 3</span><span class="lang en hidden">Weeks 2 - 3</span></h4>
-                    <span class="promo-subheader"><span class="lang es">Extracción y Motor RAG</span><span class="lang en hidden">Extraction & RAG Engine</span></span>
-                    <p><span class="lang es">Crawler de contenidos, generación de vectores, setup de base de datos y desarrollo de Backend API.</span><span class="lang en hidden">Content crawler, vector generation, database setup, and Backend API development.</span></p>
-                </div>
-                <div class="time-block">
-                    <h4><span class="lang es">Semanas 4 - 5</span><span class="lang en hidden">Weeks 4 - 5</span></h4>
-                    <span class="promo-subheader"><span class="lang es">Interfaz y Sincronización</span><span class="lang en hidden">Interface & Sync</span></span>
-                    <p><span class="lang es">Desarrollo del Widget visual, plugin nativo para WordPress y sistema de actualización automática de datos.</span><span class="lang en hidden">Visual Widget development, native WordPress plugin, and automated data update system.</span></p>
+                    <h4><span class="lang es">Semanas 3 - 5</span><span class="lang en hidden">Weeks 3 - 5</span></h4>
+                    <span class="promo-subheader"><span class="lang es">Interfaz y Desarrollo</span><span class="lang en hidden">Interface & Development</span></span>
+                    <p><span class="lang es">Desarrollo del Widget visual, plugin nativo para WordPress y sincronización.</span><span class="lang en hidden">Visual Widget development, native WordPress plugin, and synchronization.</span></p>
                 </div>
                 <div class="time-block">
                     <h4><span class="lang es">Semana 6</span><span class="lang en hidden">Week 6</span></h4>
+                    <span class="promo-subheader"><span class="lang es">Ajuste Fino y Feedback</span><span class="lang en hidden">Fine-Tuning & Feedback</span></span>
+                    <p><span class="lang es">Fine tuning, ajuste de directrices (Prompting) y feedback exclusivo sobre la forma de hablar y tono del bot.</span><span class="lang en hidden">Fine tuning, prompting adjustments, and exclusive feedback on the bot's tone and way of speaking.</span></p>
+                </div>
+                <div class="time-block">
+                    <h4><span class="lang es">Semana 7</span><span class="lang en hidden">Week 7</span></h4>
                     <span class="promo-subheader"><span class="lang es">Testing y Lanzamiento</span><span class="lang en hidden">Testing & Launch</span></span>
-                    <p><span class="lang es">Batería de pruebas de calidad, ajuste fino de respuestas (Prompting), formación del equipo y paso a producción.</span><span class="lang en hidden">Quality testing battery, fine-tuning of responses (Prompting), team training, and production launch.</span></p>
+                    <p><span class="lang es">Batería de pruebas finales de calidad, testeo exhaustivo y paso a producción.</span><span class="lang en hidden">Final quality testing battery, exhaustive testing, and production launch.</span></p>
                 </div>
             </div>
         </div>
@@ -421,30 +420,20 @@
             <div class="gt-track">
                 <div class="gt-label">
                     <span class="lang es">Desarrollo (ChatBot)</span><span class="lang en hidden">Development (ChatBot)</span>
-                    <span class="duration"><span class="lang es">6 Semanas</span><span class="lang en hidden">6 Weeks</span></span>
+                    <span class="duration"><span class="lang es">7 Semanas</span><span class="lang en hidden">7 Weeks</span></span>
                 </div>
                 <div class="gt-bar-bg">
-                    <div class="gt-bar bot"><span class="lang es">Semanas 1 - 6</span><span class="lang en hidden">Weeks 1 - 6</span></div>
+                    <div class="gt-bar bot" style="width: 35%;"><span class="lang es">Semanas 1 - 7</span><span class="lang en hidden">Weeks 1 - 7</span></div>
                 </div>
             </div>
             
             <div class="gt-track">
                 <div class="gt-label">
-                    <span class="lang es">Marketing (Estudio SEO)</span><span class="lang en hidden">Marketing (SEO Study)</span>
-                    <span class="duration"><span class="lang es">4 Semanas</span><span class="lang en hidden">4 Weeks</span></span>
+                    <span class="lang es">Marketing (Estudio SEO & Captación SEM)</span><span class="lang en hidden">Marketing (SEO Study & SEM)</span>
+                    <span class="duration"><span class="lang es">5 Meses en Total</span><span class="lang en hidden">5 Months Total</span></span>
                 </div>
                 <div class="gt-bar-bg">
-                    <div class="gt-bar seo"><span class="lang es">Semanas 1 - 4</span><span class="lang en hidden">Weeks 1 - 4</span></div>
-                </div>
-            </div>
-
-            <div class="gt-track">
-                <div class="gt-label">
-                    <span class="lang es">Marketing (Captación SEM)</span><span class="lang en hidden">Marketing (SEM Acquisition)</span>
-                    <span class="duration"><span class="lang es">4+ Meses</span><span class="lang en hidden">4+ Months</span></span>
-                </div>
-                <div class="gt-bar-bg">
-                    <div class="gt-bar sem"><span class="lang es">En paralelo y continuado tras el SEO</span><span class="lang en hidden">Parallel and ongoing after SEO</span></div>
+                    <div class="gt-bar marketing" style="width: 100%;"><span class="lang es">En paralelo y continuado tras la Fase de Datos</span><span class="lang en hidden">Parallel and ongoing after the Data Phase</span></div>
                 </div>
             </div>
             <div class="gt-markers">
@@ -452,6 +441,7 @@
                 <span>Mes 2</span>
                 <span>Mes 3</span>
                 <span>Mes 4</span>
+                <span>Mes 5</span>
             </div>
         </div>
 
@@ -459,13 +449,18 @@
             <ul class="custom-list" style="margin-top: 10px;">
                 <li>
                     <strong style="color: var(--text-dark);"><span class="lang es">Costes Recurrentes y de Terceros:</span><span class="lang en hidden">Recurring & Third-Party Costs:</span></strong> 
-                    <span class="lang es">Esta propuesta incluye exclusivamente nuestros honorarios de servicio técnico y estratégico. No incluye los costes de plataformas de terceros (ej. servidores, base de datos vectorial, consumo de APIs de IA para el ChatBot, o inversión directa publicitaria en Google Ads más allá del crédito de las promociones especificadas). Estos gastos correrán a cargo del cliente en sus propias cuentas.</span>
-                    <span class="lang en hidden">This proposal exclusively covers our technical and strategic service fees. It does not include third-party platform costs (e.g., servers, vector database, AI API consumption for the ChatBot, or direct advertising spend in Google Ads beyond the specified promos). These expenses will be borne by the client in their own accounts.</span>
+                    <span class="lang es">Esta propuesta incluye exclusivamente nuestros honorarios de servicio técnico y estratégico. No incluye los costes de plataformas de terceros (ej. servidores, base de datos vectorial, consumo de APIs de IA para el ChatBot, o inversión directa publicitaria en Google Ads más allá del crédito de las promociones). Estos gastos correrán a cargo del cliente en sus propias cuentas.</span>
+                    <span class="lang en hidden">This proposal exclusively covers our technical and strategic service fees. It does not include third-party platform costs (e.g., servers, vector database, AI API consumption for the ChatBot, or direct advertising spend in Google Ads beyond the promos). These expenses will be borne by the client in their own accounts.</span>
                 </li>
                 <li style="margin-top: 20px;">
-                    <strong style="color: var(--text-dark);"><span class="lang es">Ajustes y Prompting (ChatBot):</span><span class="lang en hidden">Adjustments & Prompting (ChatBot):</span></strong> 
-                    <span class="lang es">El presupuesto de la Fase 3 incluye el desarrollo e implementación del bot con un máximo de <strong>2 rondas de feedback</strong> para ajustar el comportamiento, tono y directrices (Prompting) del modelo de IA. Cualquier necesidad de ajuste estructural o iteraciones adicionales se gestionará mediante bolsas de horas o anexos al contrato.</span>
-                    <span class="lang en hidden">The Phase 3 budget includes the development and implementation of the bot with a maximum of <strong>2 feedback rounds</strong> to adjust the AI model's behavior, tone, and guidelines (Prompting). Any need for structural adjustment or further iterations will be managed via hourly packages or contract addendums.</span>
+                    <strong style="color: var(--text-dark);"><span class="lang es">Ajustes y Feedback (ChatBot):</span><span class="lang en hidden">Adjustments & Feedback (ChatBot):</span></strong> 
+                    <span class="lang es">El desarrollo centraliza todo el proceso de ajuste de comportamiento, tono y directrices (Prompting) de la IA exclusivamente durante la <strong>Semana 6</strong> del cronograma. Para garantizar los plazos técnicos, cualquier necesidad de iteraciones o bucles de feedback adicionales fuera de esta fase se gestionará mediante bolsas de horas o anexos al contrato.</span>
+                    <span class="lang en hidden">Development centralizes the adjustment of AI behavior, tone, and guidelines (Prompting) exclusively during <strong>Week 6</strong> of the timeline. To guarantee technical deadlines, any additional iterations or feedback loops outside this phase will be managed via hourly packages or contract addendums.</span>
+                </li>
+                <li style="margin-top: 20px;">
+                    <strong style="color: var(--text-dark);"><span class="lang es">Incertidumbre Técnica y Límites de la IA:</span><span class="lang en hidden">Technical Uncertainty & AI Limits:</span></strong> 
+                    <span class="lang es">El cliente reconoce la naturaleza experimental e imprevisible de la Inteligencia Artificial generativa[cite: 1]. A pesar de utilizar arquitectura RAG para ceñir las respuestas a los datos de la web, existe un margen de incertidumbre técnica inherente, incluyendo posibles "alucinaciones" del modelo o desvíos de contexto[cite: 1]. Se requerirá flexibilidad por parte del cliente para adaptar los resultados mediante <em>prompting</em> [cite: 1], asumiendo que no se admitirán bucles de revisión infinitos persiguiendo una precisión humana microscópica sin incurrir en presupuestos adicionales[cite: 1].</span>
+                    <span class="lang en hidden">The client acknowledges the experimental and unpredictable nature of generative Artificial Intelligence[cite: 1]. Despite using RAG architecture to constrain responses to website data, there is an inherent margin of technical uncertainty, including possible model "hallucinations" or context deviations[cite: 1]. Client flexibility will be required to adapt results via <em>prompting</em> [cite: 1], assuming infinite revision loops pursuing microscopic human precision will not be admitted without incurring additional budgets[cite: 1].</span>
                 </li>
                 <li style="margin-top: 20px;">
                     <strong style="color: var(--text-dark);"><span class="lang es">Privacidad y Legalidad:</span><span class="lang en hidden">Privacy & Compliance:</span></strong> 
